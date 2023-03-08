@@ -40,13 +40,8 @@ if (($data = $productForm->get_data())) {
     redirect(new moodle_url('/local/catalog/index.php'));
 }
 
-if ($action == 'delete' && isset($id)) {
-    $product = $DB->get_record('local_catalog_products', array('id' => $id));
-    if (!$product) {
-        print_error('invalidproductid', 'local_catalog');
-    }
-
-    $DB->delete_records('local_catalog_products', array('id' => $id));
+if ($action == 'delete') {
+    $product->delete();
     redirect(new moodle_url('/local/catalog/index.php'));
 }
 
