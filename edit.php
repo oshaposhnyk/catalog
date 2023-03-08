@@ -7,6 +7,7 @@ require_once('classes/product.php');
 require_once('form/product_form.php');
 
 $context = context_system::instance();
+require_capability('local/catalog:manageproducts', $context);
 $PAGE->set_context($context);
 $PAGE->set_url(new moodle_url('/local/catalog/edit.php'));
 $PAGE->set_pagelayout('standard');

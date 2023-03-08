@@ -2,9 +2,10 @@
 
 require_once('../../config.php');
 require "table/product_table.php";
-//require_capability('local/catalog:manageproducts', context_system::instance());
 
 $context = context_system::instance();
+require_capability('local/catalog:manageproducts', $context);
+
 $PAGE->set_context($context);
 $PAGE->set_url(new moodle_url('/local/catalog/index.php'));
 $PAGE->set_pagelayout('standard');

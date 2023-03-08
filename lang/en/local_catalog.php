@@ -37,4 +37,5 @@ $string['addproduct'] = 'Add product';
 $string['editproduct'] = 'Edit product';
 $string['manageproducts'] = 'Manage product';
 $string['local_catalog_settings'] = 'Catalog settings';
+$string['catalog:manageproducts'] = 'Can see list of all products, create new and update/delete existing products';
 

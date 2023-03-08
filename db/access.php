@@ -3,10 +3,10 @@
 $capabilities = [
         'local/catalog:manageproducts' => [
                 'riskbitmask' => RISK_SPAM,
-                'captype' => 'write',
-                'contextlevel' => CONTEXT_MODULE,
-                'archetypes' => [
-                        'editingteacher' => CAP_ALLOW,
-                ],
+                'captype' => 'read',
+                'contextlevel' => CONTEXT_SYSTEM,
+                'archetypes' => array(
+                        'manager' => CAP_ALLOW,
+                )
         ],
 ];
