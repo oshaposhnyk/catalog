@@ -30,7 +30,6 @@ class local_catalog_product_form extends \core\form\persistent {
         $mform->addElement('hidden', 'id', '');
         $mform->setType('id', PARAM_INT);
 
-        $this->add_action_buttons(false, 'Save');
-        $mform->addElement('submit', 'cancel', 'Cancel', array('onclick' => "window.location.href='". new moodle_url('/local/catalog/index.php') . "'; return false;"));
+        $this->add_action_buttons(true, 'Save');
     }
 }
